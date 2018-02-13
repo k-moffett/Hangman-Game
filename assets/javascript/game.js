@@ -15,10 +15,12 @@ document.onkeyup = function(event) {
     console.log(user_guess)
 };
 
-
-if (user_guess === indexOf(word_array)) {
-    alert("It's a match!")
+if (word_array.indexOf === user_guess) {
+    print(match)
 }
+
+ 
+   
 
 
 
