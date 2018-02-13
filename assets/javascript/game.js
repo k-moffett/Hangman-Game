@@ -12,11 +12,14 @@ var current_array = current_word.split("")
 console.log(current_array)
 
 
-//Generates the user's guess
-document.onkeyup = function guess() {
-    var array = []
-    var item = event.key
-    array.push(item);
-    console.log(array)
+//Generates an array of the user's guesses
+document.onkeyup = function (event) {
+    var user_guess = []
+    var user_input = event.key
+    user_guess.push(user_input);
+    console.log(user_guess)
 }
 
+
+
+  
