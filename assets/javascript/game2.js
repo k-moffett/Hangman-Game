@@ -9,15 +9,10 @@ var wong_guesses;
 var win_counter;
 var loss_counter;
 
-guess(user_guess)
-function guess(g) {
-if (g = null) {
-    null
-} else {
-    document.onkeyup = function (g) {
-        g = event.key
-        return g
-        }
-    }
-}
-console.log(user_guess)
+
+
+
+document.onkeyup = function (choice) {
+        choice = event.key
+        console.log(choice)
+    } == user_guess
