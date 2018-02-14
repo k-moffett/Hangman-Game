@@ -31,7 +31,7 @@
 
 
 //***Stuff that needs to be defines globally
-var user_guess
+var user_guess 
 
 
 
@@ -43,18 +43,16 @@ var current_word = word_list[Math.floor(Math.random() * word_list.length)]
 console.log(current_word)
 //Turns current_word into new string
 var word_array = current_word.split("")
+console.log(word_array)
 
+//Set current word as blanks and set guesses left
 onload = reset_word(), reset_guesses_left()
-//Set current word as blanks
 function reset_word() {
-    var word_blanks = document.getElementById("word-blanks")
-    for (var i = 0; i < word_array.length; i++) {
-        var new_letter_div = document.createElement("div");
-        new_letter_div.innerHTML = word_array[i];
-        word_blanks.appendChild(new_letter_div);
+    for (var i = 0; i < current_word.length; i++) {
+        document.getElementById("word-blanks").innerHTML= current_word
     }
 }
-//Set Guesses left
+
 function reset_guesses_left() {
     document.getElementById("guesses-left").innerHTML= "9"
 }
@@ -64,12 +62,14 @@ function reset_guesses_left() {
 //Set wins and losses already at 0 in html
 
 //create game loop
-
-//create user input
-//Generates an array of the user's guesses
+    //create user input
+    //Generates a user guess as a string
 document.onkeyup = function (event) {
-    var user_guess = []
-    var user_input = event.key
-    user_guess.push(user_input);
+    var user_guess = event.key
+    var user_guess_div = document.createElement("user-guess-div");
+    user_guess_div.innerHTML = user_guess
     console.log(user_guess)
 }
+
+ 
+
