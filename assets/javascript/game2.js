@@ -11,20 +11,21 @@ var game = {
 
 function validate_input(params) {
     var valid_input = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var user_input = event.key  
         for (var i = 0; i <valid_input.length; i++){
-            if (valid_input[i] == event.key)
-            console.log(event.key)
-            wrong_guess(event.key)
+            if (valid_input[i] == user_input)
+            console.log(user_input)
+            wrong_guess(user_input)
         }
 }
 
 function wrong_guess(params) {
+    user_input = params
     for (var i = 0; i <game.current_word.length; i++){
-        if (game.current_word[i] == event.key){
-           
-        }
-
-}
+        if (game.current_word[i] != user_input){
+            console.log(user_input)
+        } 
+    }
 }
 function add(params) {return x + 1}
 function subtract(params) {return x - 1}
