@@ -9,7 +9,7 @@ var game = {
     }
 
 
-function main_loop(params) {
+function validate_input(params) {
     var valid_input = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     var word_array = game.current_word.split().join(" ");
     var user_input = event.key;
@@ -33,5 +33,5 @@ function start_game(params) {
 document.addEventListener("keyup", function (event) {
     console.log(event)
     event.key
-    main_loop()
+    validate_input()
     });
