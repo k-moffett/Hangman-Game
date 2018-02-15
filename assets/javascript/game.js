@@ -34,29 +34,31 @@
 
 
 
-var user_guess = event.key
 
 
 
 
 
 
-        var word_list = ["goldfish", "frog", "snake", "cat"]
+
+var word_list = ["goldfish", "frog", "snake", "cat"]
 var current_word = word_list[Math.floor(Math.random() * word_list.length)]
 console.log(word_list)
 console.log(current_word)
 
 
-onload = reset_word(), reset_guesses_left()
-    function reset_word() {document.getElementById("word-blanks").innerHTML= current_word.split("")}
-    function reset_guesses_left() {document.getElementById("guesses-left").innerHTML= "9"}
+
+    function reset_word(param) {document.getElementById("word-blanks").innerHTML= current_word.split("")}
+    function reset_guesses_left(param) {document.getElementById("guesses-left").innerHTML= "9"}
    
    
     
 document.addEventListener("keyup", function (event) {
     console.log(event)
-    return event.key
+    event.key
     });
-
-
+function start_game(param) {
+reset_word(param)
+reset_guesses_left(param)
+}
         
