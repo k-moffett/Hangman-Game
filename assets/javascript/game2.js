@@ -6,7 +6,7 @@ var game = {
         wins : 0,
         losses : 0,
         start: function reset_word() {
-            document.getElementById("word-blanks").innerHTML= this.current_word.split("")}
+            document.getElementById("word-blanks").innerHTML= this.current_word.split("").join(" ")}
     }
 
 
