@@ -20,7 +20,8 @@ function validate_input(params) {
 }
 
 function wrong_guess(params) {
-
+    var user_input = params
+    
 }
 
 
