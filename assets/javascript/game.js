@@ -31,7 +31,7 @@
 
 
 //***Stuff that needs to be defines globally
-var user_guess = document.getElementById("user-guess-div")
+
 
 
 
