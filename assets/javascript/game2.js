@@ -15,16 +15,18 @@ function validate_input(params) {
         for (var i = 0; i <valid_input.length; i++){
             if (valid_input[i] == user_input)
             console.log(user_input)
-            wrong_guess(user_input)
+            return wrong_guess(user_input)
         }
 }
 
 function wrong_guess(params) {
     var user_input = params
-    var current_string = game.current_word.split("").join(" ")
+    var current_string = game.current_word.split("")
+        for (var i = 0; i <current_string.length; i++){
+            if (current_string[i] != user_input)
+            return alert("wrong")
+        }   
 }
-
-
 
 function add(params) {return x + 1}
 function subtract(params) {return x - 1}
