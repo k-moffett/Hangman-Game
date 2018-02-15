@@ -24,13 +24,9 @@ function wrong_guess(params) {
     var current_string = game.current_word.split("")
         for (var i = 0; i <current_string.length; i++){
             if (current_string[i] != user_input)
-            alert("wrong")
+            return alert("wrong")
         }   
 }
-
-
-
-
 
 function add(params) {return x + 1}
 function subtract(params) {return x - 1}
