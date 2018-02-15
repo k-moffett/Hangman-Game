@@ -1,18 +1,8 @@
-//Stuff that needs to be defined globally
-var user_guess;
-var current_word;
-var word_list;
-var letters_guessed;
-var word_blanks;
-var guesses_left;
-var wong_guesses;
-var win_counter;
-var loss_counter;
+var game = {
+    wrong_guesses: 0,
+    guesses_left: 0,
+    wins: 0,
+    losses: 0,
+    user_guess: addEventListener(keyup) = function (params) {return print }
 
-
-
-
-document.onkeyup = function (choice) {
-        choice = event.key
-        console.log(choice)
-    } == user_guess
+}

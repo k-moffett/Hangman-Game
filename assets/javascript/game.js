@@ -30,40 +30,33 @@
 
 
 
-//***Stuff that needs to be defines globally
+
+
+
+
+var user_guess = event.key
 
 
 
 
 
-//Set word to guess
-//Selects a random item from the array
-word_list = ["goldfish", "frog", "snake", "cat"]
+
+        var word_list = ["goldfish", "frog", "snake", "cat"]
 var current_word = word_list[Math.floor(Math.random() * word_list.length)]
 console.log(word_list)
 console.log(current_word)
 
-//Set current word as blanks and set guesses left
+
 onload = reset_word(), reset_guesses_left()
-    function reset_word() {
-        for (var i = 0; i < current_word.length; i++) {
-            document.getElementById("word-blanks").innerHTML= current_word
-        }
-    }
-    function reset_guesses_left() {
-        document.getElementById("guesses-left").innerHTML= "9"
-    }
+    function reset_word() {document.getElementById("word-blanks").innerHTML= current_word.split("")}
+    function reset_guesses_left() {document.getElementById("guesses-left").innerHTML= "9"}
+   
+   
+    
+document.addEventListener("keyup", function (event) {
+    console.log(event)
+    return event.key
+    });
 
 
-//Set wrong guesses: document.getElementById("wrong-guesses").innerHTML= "0"
-//Set wins and losses already at 0 in html
-
-//create game loop
-    //create user input
-    //Generates a user guess as a string
-document.onkeyup = function (event) {
-    var user_guess = event.key
-    var user_guess_div = document.createElement("user-guess-div");
-    user_guess_div.innerHTML = user_guess
-    console.log(user_guess)
-}
+        
