@@ -4,7 +4,6 @@ var game = {
         start: function reset_word() {
             document.getElementById("word-blanks").innerHTML= this.current_word.split("").join(" ")
             guesses_left = document.getElementById("guesses-left").innerHTML= "9";
-            wrong_guesses = document.getElementById("wrong-guesses").innerHTML= "0";
         }         
     }
 
@@ -19,11 +18,19 @@ function validate_input(params) {
 }
 
 function wrong_guess(params) {
-    
+    for (var i = 0; i <game.current_word.length; i++){
+        if (game.current_word[i] == event.key){
+            document.getElementById("guesses-left").innerHTML= "9"
+        }
+
 }
-
-
-
+}
+function subtract(params) {
+    return x - 1
+}
+function add(params) {
+    return x + 1
+}
 
 
 
