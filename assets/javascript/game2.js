@@ -20,13 +20,11 @@ function validate_input(params) {
 }
 
 function wrong_guess(params) {
-    user_input = params
-    for (var i = 0; i <game.current_word.length; i++){
-        if (game.current_word[i] != user_input){
-            console.log(user_input)
-        } 
-    }
+
 }
+
+
+
 function add(params) {return x + 1}
 function subtract(params) {return x - 1}
 
