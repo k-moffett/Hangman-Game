@@ -3,7 +3,7 @@
     //Set guesses left****guesses-Left****
 
     //Set wrong guesses***wrong-guesses***
-    //Set wins****winCounter***
+    //Set wins****win-counter***
     //Set losses***loss-counter***
         //^---these three need to only reset when the page refreshes 
         
