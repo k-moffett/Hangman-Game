@@ -1,7 +1,6 @@
 var word_list = ["goldfish", "frog", "snake", "cat"]
 var game = {
         valid_input : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
-        invalid_input : [],
         current_word : word_list[Math.floor(Math.random() * word_list.length)],
         start: function reset_word() {
             document.getElementById("word-blanks").innerHTML= this.current_word.split("").fill("_").join(" ")
@@ -15,14 +14,15 @@ function validate_input(params) {
         }}}
 function used_letters(valid_input, user_input) {
     var used_letter = (valid_input.indexOf(user_input))
-    console.log(used_letter)
-    validate_used_letters(used_letter, user_input)
+    remove_used_letters(used_letter, user_input)
 }
-function validate_used_letters(used_letter, user_input) {
-    var used_letters = [];
-    used_letters.push(used_letter);
-    console.log(used_letters)
+function remove_used_letters(used_letter, user_input) {
+    var remove_this = used_letter
+    var new_valid_letters = game.valid_input.splice(remove_this, 1)
+    console.log(remove_this)
+    console.log(new_valid_letters)
 }
+
 
 
 
