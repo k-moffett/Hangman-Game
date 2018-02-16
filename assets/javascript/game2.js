@@ -16,11 +16,13 @@ function validate_input(params) {
 function used_letters(valid_input, user_input) {
     var used_letter = (valid_input.indexOf(user_input))
     console.log(used_letter)
-    used_letters = used_letter.map(x)
-    console.log(used_letters)
-
+    validate_used_letters(used_letter, user_input)
 }
-
+function validate_used_letters(used_letter, user_input) {
+    var used_letters = [];
+    used_letters.push(used_letter);
+    console.log(used_letters)
+}
 
 
 
