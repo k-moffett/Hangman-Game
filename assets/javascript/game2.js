@@ -26,20 +26,21 @@ function incorrect_guess(user_input) {
             if (game.current_word.split("")[i] == user_input){
                 correct_guess(user_input)
 } else {
-
+    var increase_wrong = document.getElementById("wrong-guesses").innerHTML++
+    var lose_guesses = document.getElementById("guesses-left").innerHTML--
+       if (document.getElementById("guesses-left").innerHTML= 0) 
+           alert("You Lose, You Loser")
 }}}
 
 
+
+
+
+
+
 function correct_guess(user_input) {
-console.log(user_input)
-}
-
-
-
-
-
-
-
+    console.log(user_input)
+    }
 
 console.log(game.current_word)
 function start_game(params) {
