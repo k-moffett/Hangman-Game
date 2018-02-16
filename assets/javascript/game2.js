@@ -15,10 +15,11 @@ function validate_input(params) {
     var user_input = event.key  
         for (var i = 0; i <game.valid_input.length; i++){
             if (game.valid_input[i] == user_input){
-                console.log(game.valid_input)
-                console.log(user_input )
+                used_letters(game.valid_input, user_input)      
         }}}
-
+function used_letters(valid_input, user_input) {
+    console.log(valid_input.indexOf(user_input));
+}
 
 
 
@@ -36,7 +37,6 @@ function start_game(params) {
     game.start()
 }
 document.addEventListener("keyup", function (event) {
-    console.log(event)
     event.key
     validate_input()
     });
