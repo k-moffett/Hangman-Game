@@ -19,8 +19,19 @@ function used_letters(valid_input, user_input) {
 function remove_used_letters(used_letter, user_input) {
     var remove_this = used_letter
     var new_valid_letters = game.valid_input.splice(remove_this, 1)
-    console.log(remove_this)
-    console.log(new_valid_letters)
+    incorrect_guess(user_input)
+}
+function incorrect_guess(user_input) {
+        for (var i = 0; i <game.current_word.split("").length; i++){
+            if (game.current_word.split("")[i] == user_input){
+                correct_guess(user_input)
+} else {
+
+}}}
+
+
+function correct_guess(user_input) {
+console.log(user_input)
 }
 
 
@@ -30,9 +41,7 @@ function remove_used_letters(used_letter, user_input) {
 
 
 
-
-
-
+console.log(game.current_word)
 function start_game(params) {
     game.start()
 }
