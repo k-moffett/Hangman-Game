@@ -14,10 +14,12 @@ function validate_input(params) {
                 used_letters(game.valid_input, user_input)      
         }}}
 function used_letters(valid_input, user_input) {
-     var used_letter = (valid_input.indexOf(user_input))
-     console.log(used_letter)
-}
+    var used_letter = (valid_input.indexOf(user_input))
+    console.log(used_letter)
+    used_letters = used_letter.map(x)
+    console.log(used_letters)
 
+}
 
 
 
