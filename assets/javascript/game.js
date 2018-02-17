@@ -44,17 +44,20 @@ function not_good(user_input) {
 
 function correct_guess(user_input) {
 var index = game.current_word.indexOf(user_input)
-console.log(index)
 var current_word = document.getElementById("word-blanks").innerHTML
-console.log(current_word)
 var split_word = current_word.split(" ")
-console.log(split_word)
 var new_word = split_word.splice(index, 1, user_input)
-console.log(new_word)
 document.getElementById("word-blanks").innerHTML= split_word.join(" ")
-                
+fill_blanks()
 }
-    
+
+function fill_blanks() {
+var word = document.getElementById("word-blanks").innerHTML
+var your_word = word.split(" ")
+console.log(your_word)
+var correct_word = game.current_word.split("")
+console.log(correct_word)            
+}
 
 
     
@@ -66,7 +69,6 @@ document.getElementById("word-blanks").innerHTML= split_word.join(" ")
 
 
 
-console.log(game.current_word)
 function start_game(params) {
     game.start()
 }
