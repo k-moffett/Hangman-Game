@@ -54,9 +54,17 @@ fill_blanks()
 function fill_blanks() {
 var word = document.getElementById("word-blanks").innerHTML
 var your_word = word.split(" ")
-console.log(your_word)
 var correct_word = game.current_word.split("")
-console.log(correct_word)            
+win(your_word, correct_word)            
+}
+function win(your_word, correct_word){
+var your_final_word = your_word.join(" ")
+var correct_final_word = correct_word.join(" ")
+console.log(your_final_word)
+console.log(correct_final_word)
+if (your_final_word === correct_final_word) {
+    alert("you win!")
+}
 }
 
 
