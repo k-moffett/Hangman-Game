@@ -27,26 +27,43 @@ function remove_used_letters(used_letter, user_input) {
 function incorrect_guess(user_input) {
         for (var i = 0; i <game.current_word.split("").length; i++){
             if (game.current_word.split("")[i] == user_input){
-                correct_guess(user_input)
-} else {
-        not_good()
-}}}
+                correct_guess(user_input) 
+                }
+}}
 
-function not_good() {
+
+
+
+function not_good(user_input) {
     var wrong_number = document.getElementById("wrong-guesses").innerHTML
     var guesses_number = document.getElementById("guesses-left").innerHTML
-    console.log(wrong_number)
-    console.log(guesses_number)
 }
 
 
 
 
 
-
 function correct_guess(user_input) {
-    console.log(user_input)
-    }
+var index_of_user_input = game.current_word.indexOf(user_input)
+var current_word = document.getElementById("word-blanks").innerHTML
+var filter_current_word = current_word.trim()
+var final_word = filter_current_word.split("").join("")
+console.log(final_word)
+final_word.replace(index_of_user_input, user_input)
+document.getElementById("word-blanks").innerHTML= final_word
+
+}
+    
+
+
+    
+    
+
+
+
+
+
+
 
 console.log(game.current_word)
 function start_game(params) {
