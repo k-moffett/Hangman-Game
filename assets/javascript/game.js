@@ -44,13 +44,17 @@ function not_good(user_input) {
 
 
 function correct_guess(user_input) {
-var index_of_user_input = game.current_word.indexOf(user_input)
+var index = game.current_word.indexOf(user_input)
+console.log(index)
 var current_word = document.getElementById("word-blanks").innerHTML
-var filter_current_word = current_word.trim()
-var final_word = filter_current_word.split("").join("")
-console.log(final_word)
-final_word.replace(index_of_user_input, user_input)
-document.getElementById("word-blanks").innerHTML= final_word
+console.log(current_word)
+var new_word = current_word.split(" ")
+console.log(new_word)
+
+
+
+
+
 
 }
     
