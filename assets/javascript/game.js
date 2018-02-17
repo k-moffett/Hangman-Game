@@ -8,13 +8,13 @@ var game = {
             document.getElementById("guesses-left").innerHTML= "9";
             document.getElementById("win-counter").innerHTML= "0";
             document.getElementById("loss-counter").innerHTML= "0"; 
-        }}
+}}
 function validate_input(params) {
     var user_input = event.key  
         for (var i = 0; i <game.valid_input.length; i++){
             if (game.valid_input[i] == user_input){
                 used_letters(game.valid_input, user_input)      
-        }}}
+}}}
 function used_letters(valid_input, user_input) {
     var used_letter = (valid_input.indexOf(user_input))
     remove_used_letters(used_letter, user_input)
@@ -28,8 +28,7 @@ function incorrect_guess(user_input) {
         for (var i = 0; i <game.current_word.split("").length; i++){
             if (game.current_word.split("")[i] == user_input){
                 correct_guess(user_input) 
-                }
-}}
+}}}
 
 
 
@@ -48,14 +47,12 @@ var index = game.current_word.indexOf(user_input)
 console.log(index)
 var current_word = document.getElementById("word-blanks").innerHTML
 console.log(current_word)
-var new_word = current_word.split(" ")
+var split_word = current_word.split(" ")
+console.log(split_word)
+var new_word = split_word.splice(index, 1, user_input)
 console.log(new_word)
-
-
-
-
-
-
+document.getElementById("word-blanks").innerHTML= split_word.join(" ")
+                
 }
     
 
