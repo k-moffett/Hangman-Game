@@ -114,7 +114,7 @@ function updateWin() {
 
 function updateLoss() {
     //add what happens if the user loses code here
-    lossCounter = lossCounter++
+    lossCounter = lossCounter+1
     //Make a call to the startGame function here.
     //This call is here to start the game once a player losses.
     document.getElementById('message').textContent= "You Lose!"
