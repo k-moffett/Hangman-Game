@@ -107,6 +107,7 @@ function updateWin() {
     winCounter = winCounter+1
     //Make a call to the startGame function here. 
     //This call is here to start the game once a player wins.
+    document.getElementById('message').textContent= "You Win!"
     startGame()
 
 }
@@ -116,6 +117,7 @@ function updateLoss() {
     lossCounter = lossCounter++
     //Make a call to the startGame function here.
     //This call is here to start the game once a player losses.
+    document.getElementById('message').textContent= "You Lose!"
     startGame()
 }
 //This function takes an arr for an argument (we use it for our id array)
