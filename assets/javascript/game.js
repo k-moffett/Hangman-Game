@@ -107,7 +107,7 @@ function updateWin() {
     winCounter = winCounter+1
     //Make a call to the startGame function here. 
     //This call is here to start the game once a player wins.
-    print(document.getElementById("message"), startGame())
+    startGame()
 
 }
 
@@ -116,7 +116,7 @@ function updateLoss() {
     lossCounter = lossCounter++
     //Make a call to the startGame function here.
     //This call is here to start the game once a player losses.
-    print("message", startGame())
+    startGame()
 }
 //This function takes an arr for an argument (we use it for our id array)
 function print(arr) {
@@ -134,7 +134,8 @@ function print(arr) {
     });
 }
 //explain what the print function is doing.
-//This function is making sure that the variable is a string, then printing it to the DOM
+//This function is checking to make sure the param is an array. If it is, the if part will join the array to form a string and print it onscreen
+//If its not array, it will just print it onscreen without doing anything because it is a string already
 
 
 
